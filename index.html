@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link href="css/tagsinput.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Multi-Etape</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="sm-stepper-container col-xs-12">
+                <div class="my-progress">
+                    <div class="rect5"></div>
+                    <div id="rect3" class="rotate rect3"></div>
+                    <div id="rect4" class="fix rect4"></div>
+                    <div id="rect1" class="rotate rect1"></div>
+                    <div id="rect2" class="fix rect2"></div>
+                    <div class="rond"></div>
+                    <span id="stepNum"></span>
+                </div>
+                <div class="step-titles">
+                    <span id="currentStep"></span>
+                    <span id="nextStep"></span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-5 lg-stepper-container">
+                <div>
+                    <ul class="lg-stepper">
+                        <li class="step active-step">
+                            <span class="step-numero">1</span>
+                            <span class="step-title">Informations de contact</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-numero">2</span>
+                            <span class="step-title">Description du projet</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-numero">3</span>
+                            <span class="step-title">Travaux que je souhaite réaliser</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-numero">4</span>
+                            <span class="step-title">Informations sur le bien</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-numero">5</span>
+                            <span class="step-title">Finalisation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7 col-sm-7 form-container">
+                <form class="" id="regForm" action="">
+                    <div class="input-fields">
+                        <div class="tab">
+                            <p class="input-container">
+                                <span class="input-icon"><i class="fa fa-user "></i></span>
+                                <input placeholder="Nom" class="icon-input s-input">
+                            </p>
+                            <p class="input-container">
+                                <span class="input-icon"><i class="fa fa-user "></i></span>
+                                <input placeholder="Prénom" class="icon-input s-input">
+                            </p>
+                            <p class="input-container">
+                                <span class="input-icon"><i class="fa fa-envelope "></i></span>
+                                <input placeholder="E-mail" class="icon-input s-input">
+                            </p>
+                            <p class="input-container">
+                                <span class="input-icon"><i class="fa fa-phone "></i></span>
+                                <input placeholder="Téléphone" class="icon-input s-input">
+                            </p>
+                            <p class="input-container">
+                                <span class="input-icon "><i class="fa fa-map-pin "></i></span>
+                                <input placeholder="Adresse du chantier" class="icon-input s-input">
+                            </p>
+                        </div>
+                        
+                        <div class="tab">Description:
+                            <p class="input-container">
+                                <textarea placeholder="Décrivez votre projet en quelque mots" class="s-textarea" name="" id=""  rows="10"></textarea>
+                            </p>
+                        </div>
+    
+                        <div class="tab">
+                            
+                            <div class="">Type de travaux:
+                                <div>
+                                    <div class="col-md-4">
+                                        <label class="s-radio">
+                                            <input type="radio" name="type_travaux" checked="checked" value="construction">
+                                            <span class="checkmark"></span>
+                                            <span>Construction</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="s-radio">
+                                            <input type="radio" name="type_travaux" checked="checked" value="Renovation">
+                                            <span class="checkmark"></span>
+                                            <span>Renovation</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="s-radio">
+                                            <input type="radio" name="type_travaux" value="Agrandissement">
+                                            <span class="checkmark"></span>
+                                            <span>Agrandissement</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">Gros oeuvres:
+                                <div class="input-container">
+                                    
+                                    <select multiple data-style="bg-white rounded-pill px-4 py-3 shadow-sm " class="selectpicker w-100">
+                                        <option>Maçonnerie</option>
+                                        <option>Couverture</option>
+                                        <option>Isolation extérieure</option>
+                                        <option>Ravalement</option>
+                                        <option>Terrasse</option>
+                                        <option value="">Démolition</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="">Second oeuvres:
+                                <div class="input-container">
+                                    <select multiple data-style="bg-white rounded-pill px-2 py-2 shadow-sm " class="selectpicker w-90">
+                                        <option value="1">Carrelage</option>
+                                        <option value="2">Menuiseries</option>
+                                        <option value="3">Enduit / Peinture</option>
+                                        <option value="4">Revêtement mural</option>
+                                        <option value="5">Moquette</option>
+                                        <option value="6">Plomberie</option>
+                                        <option value="7">Ragréage</option>
+                                        <option value="8">Faux-plafond</option>
+                                        <option value="9">Papier-peint</option>
+                                        <option value="0">Revêtement de sol</option>
+                                        <option value="11">Chauffage</option>
+                                        <option value="12">Plâtrerie</option>
+                                        <option value="13">Chape</option>
+                                        <option value="14">Cloisons</option>
+                                        <option value="15">Fibre de verre</option>
+                                        <option value="16">Parquet</option>
+                                        <option value="17">Électricité</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="">Autres oeuvres:
+                                <select multiple data-role="tagsinput" placeholder="Entrez..." >
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div>Type de bien:
+                                <p class="input-container">
+                                    <span class="input-icon-right"><i class="fa fa-caret-down "></i></span>
+                                    <select class="s-select" name="type_bien" required="required">
+                                        <option value="" disabled="" selected="">Veuillez choisir...</option>
+                                        <option value="Appartement">Appartement</option>
+                                        <option value="Maison">Maison</option>
+                                        <option value="Loft">Loft</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Manoir">Manoir</option>
+                                        <option value="Corps de ferme">Corps de ferme</option>
+                                        <option value="Bureaux">Bureaux</option>
+                                        <option value="Studio">Studio</option>
+                                        <option value="Château">Château</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div>Surface:
+                                <p class="input-container">
+                                    <input class="s-input" type="text">
+                                </p>
+                            </div>
+                            <div>Hauteur sous plafond:
+                                <p class="input-container">
+                                    <input class="s-input" type="text">
+                                </p>
+                            </div>
+                            <div>Budget des travaux:
+                                <p class="input-container">
+                                    <input class="s-input" type="text">
+                                </p>
+                            </div>
+                            <div>Date de début des travaux envisagés:
+                                <p class="input-container">
+                                    <input class="s-input" type="text">
+                                </p>
+                            </div>
+                            <div>Type de murs:
+                                <p class="input-container">
+                                    <input class="s-input" type="text">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div>J'ai les autorisations nécessaires:
+                                <p class="input-container">
+                                    <span class="input-icon-right"><i class="fa fa-caret-down "></i></span>
+                                    <select class="s-select" name="autorisations" required="required">
+                                        <option value="" disabled="" selected="">Veuillez choisir...</option>
+                                        <option value="J'ai les autorisations nécessaires pour ce type de travaux">Oui</option>
+                                        <option value="Je n'ai pas les autorisations nécessaires pour ce type de travaux">Non</option>
+                                        <option value="C'est en cours">C'est en cours</option>
+                                        <option value="Aucune autorisation n'est nécessaire pour ce type de travaux">Aucune autorisation n'est nécessaire</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="button-container container">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i class="fa fa-arrow-left" style="margin-right: 13px;"></i>Retour</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Continuer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/tagsinput.js"></script>
+    <script src="js/stepper-form.js"></script>
+    <script>
+        $(function () {
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+
+</body>
+</html>
